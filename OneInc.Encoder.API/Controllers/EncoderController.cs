@@ -34,7 +34,7 @@ namespace OneInc.Encoder.API.Controllers
         public async IAsyncEnumerable<string> GetBase64FromString(string originalText,[EnumeratorCancellation] CancellationToken cancellationToken)
         {
             var originalTextBytes = Encoding.UTF8.GetBytes(originalText);
-            string base64FromString = Convert.ToBase64String(originalTextBytes); ;
+            string base64FromString = Convert.ToBase64String(originalTextBytes);
 
             foreach (char character in base64FromString.ToArray())
             {
